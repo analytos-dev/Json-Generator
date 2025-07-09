@@ -1,0 +1,1489 @@
+{
+  "@activepieces/piece-activecampaign": {
+    "actions": [
+      "activecampaign_add_contact_to_account",
+      "activecampaign_add_tag_to_contact",
+      "activecampaign_create_account",
+      "activecampaign_create_contact",
+      "activecampaign_update_account",
+      "activecampaign_update_contact",
+      "activecampaign_subscribe_or_unsubscribe_contact_from_list"
+    ],
+    "triggers": [
+      "activecampaign_deal_task_completed",
+      "activecampaign_new_contact_note",
+      "activecampaign_new_contact_task",
+      "activecampaign_new_deal_added_or_updated",
+      "activecampaign_new_or_updated_account",
+      "activecampaign_new_deal_note",
+      "activecampaign_new_deal_task",
+      "activecampaign_new_tag_added_or_removed_from_contact",
+      "activecampaign_updated_contact"
+    ]
+  },
+  "@activepieces/piece-actualbudget": {
+    "actions": [
+      "get_budget",
+      "import_transaction",
+      "import_transactions",
+      "get_categories",
+      "get_accounts"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-acumbamail": {
+    "actions": [
+      "acumbamail_add_update_subscriber",
+      "acumbamail_create_subscriber_list",
+      "acumbamail_unsubscribe_subscriber",
+      "acumbamail_delete_subscriber_list",
+      "acumbamail_duplicate_template",
+      "acumbamail_search_subscriber",
+      "acumbamail_remove_subscriber"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-afforai": {
+    "actions": [
+      "afforai_ask_chatbot"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-agent": {
+    "actions": [
+      "run_agent"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-aianswer": {
+    "actions": [
+      "gmailGetListOfAgents",
+      "createPhoneCall",
+      "getCallDetails",
+      "scheduleCallAgent",
+      "getCallTranscript"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-airparser": {
+    "actions": [
+      "extract_data_from_document",
+      "upload_document"
+    ],
+    "triggers": [
+      "document_parsed"
+    ]
+  },
+  "@activepieces/piece-amazon-s3": {
+    "actions": [
+      "upload-file",
+      "read-file",
+      "generate-signed-url"
+    ],
+    "triggers": [
+      "new_file"
+    ]
+  },
+  "@activepieces/piece-amazon-sns": {
+    "actions": [
+      "send-message"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-amazon-sqs": {
+    "actions": [
+      "sendMessage"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-aminos": {
+    "actions": [
+      "createUser"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-anyhook-graphql": {
+    "actions": [],
+    "triggers": [
+      "graphql_subscription_trigger"
+    ]
+  },
+  "@activepieces/piece-anyhook-websocket": {
+    "actions": [],
+    "triggers": [
+      "websocket_subscription_trigger"
+    ]
+  },
+  "@activepieces/piece-apify": {
+    "actions": [
+      "getDatasetItems",
+      "getActors",
+      "getLastRun",
+      "startActor"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-apollo": {
+    "actions": [
+      "matchPerson",
+      "enrichCompany"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-approval": {
+    "actions": [
+      "wait_for_approval",
+      "create_approval_links"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-azure-communication-services": {
+    "actions": [
+      "send_email"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-azure-openai": {
+    "actions": [
+      "ask_gpt"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-backblaze": {
+    "actions": [
+      "upload-backblaze-file",
+      "read-backblaze-file"
+    ],
+    "triggers": [
+      "new_backblaze_file"
+    ]
+  },
+  "@activepieces/piece-binance": {
+    "actions": [
+      "fetch_crypto_pair_price"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-bubble": {
+    "actions": [
+      "bubble_create_thing",
+      "bubble_delete_thing",
+      "bubble_update_thing",
+      "bubble_get_thing",
+      "bubble_list_things"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-campaign-monitor": {
+    "actions": [
+      "add_subscriber_to_list",
+      "update_subscriber_details",
+      "unsubscribe_subscriber",
+      "find_subscriber"
+    ],
+    "triggers": [
+      "new_subscriber_added",
+      "subscriber_unsubscribed",
+      "new_client"
+    ]
+  },
+  "@activepieces/piece-chainalysis-api": {
+    "actions": [
+      "checkAddressSanction"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-chargekeep": {
+    "actions": [
+      "addOrUpdateContact(extended)",
+      "addOrUpdateContact(extended)",
+      "addOrUpdateSubscription",
+      "createInvoice",
+      "createProduct",
+      "getContactDetails"
+    ],
+    "triggers": [
+      "new_lead",
+      "new_payment",
+      "new_subscription"
+    ]
+  },
+  "@activepieces/piece-comfyicu": {
+    "actions": [
+      "get-run-output",
+      "get-run-status",
+      "list-workflows",
+      "submit-workflow-run"
+    ],
+    "triggers": [
+      "new-workflow-created",
+      "run-completed",
+      "run-failed"
+    ]
+  },
+  "@activepieces/piece-connections": {
+    "actions": [
+      "read_connection"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-convertkit": {
+    "actions": [
+      "subscribers_get_subscriber_by_id",
+      "subscribers_get_subscriber_by_id",
+      "subscribers_get_subscriber_by_id",
+      "subscribers_get_subscriber_by_id",
+      "subscribers_get_subscriber_by_id",
+      "subscribers_get_subscriber_by_id",
+      "subscribers_get_subscriber_by_id",
+      "create_webhook",
+      "create_webhook",
+      "custom_fields_list_fields",
+      "custom_fields_list_fields",
+      "custom_fields_list_fields",
+      "custom_fields_list_fields",
+      "broadcasts_list_broadcasts",
+      "broadcasts_list_broadcasts",
+      "broadcasts_list_broadcasts",
+      "broadcasts_list_broadcasts",
+      "broadcasts_list_broadcasts",
+      "broadcasts_list_broadcasts",
+      "forms_list_forms",
+      "forms_list_forms",
+      "forms_list_forms",
+      "sequences_list_sequences",
+      "sequences_list_sequences",
+      "sequences_list_sequences",
+      "subscribers_get_subscriber_by_id",
+      "tags_list_tags",
+      "tags_list_tags",
+      "tags_list_tags",
+      "tags_list_tags",
+      "tags_list_tags",
+      "purchases_list_purchases",
+      "purchases_list_purchases",
+      "purchases_list_purchases",
+      "purchases_list_purchases"
+    ],
+    "triggers": [
+      "tags_list_tags"
+    ]
+  },
+  "@activepieces/piece-copy-ai": {
+    "actions": [
+      "run_workflow",
+      "get_workflow_run_status",
+      "get_workflow_run_outputs"
+    ],
+    "triggers": [
+      "workflow_run_completed"
+    ]
+  },
+  "@activepieces/piece-crypto": {
+    "actions": [
+      "hash-text",
+      "hmac-signature",
+      "generate-password",
+      "base64-decode",
+      "base64-encode"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-csv": {
+    "actions": [
+      "convert_csv_to_json",
+      "convert_json_to_csv"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-dappier": {
+    "actions": [
+      "real_time_web_search",
+      "stock_market_data_search",
+      "sports_news_search",
+      "lifestyle_news_search"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-data-mapper": {
+    "actions": [
+      "advanced_mapping"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-data-summarizer": {
+    "actions": [
+      "calculateAverage",
+      "calculateSum",
+      "countUniques",
+      "getMinMax"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-date-helper": {
+    "actions": [
+      "get_current_date",
+      "format_date",
+      "extract_date_parts",
+      "date_difference",
+      "add_subtract_date",
+      "next_day_of_week",
+      "next_day_of_year"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-deepseek": {
+    "actions": [
+      "ask_deepseek"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-delay": {
+    "actions": [
+      "delayFor",
+      "delay_until"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-devin": {
+    "actions": [
+      "create_session",
+      "get_session_details",
+      "send_message"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-dust": {
+    "actions": [
+      "createConversation",
+      "getConversation",
+      "replyToConversation",
+      "addFragmentToConversation",
+      "addDocument",
+      "uploadFile"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-eth-name-service": {
+    "actions": [
+      "listEnsDomains"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-facebook-leads": {
+    "actions": [],
+    "triggers": [
+      "new_lead"
+    ]
+  },
+  "@activepieces/piece-facebook-pages": {
+    "actions": [
+      "create_post",
+      "create_photo_post",
+      "create_video_post"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-file-helper": {
+    "actions": [
+      "read_file",
+      "createFile",
+      "change_file_encoding",
+      "checkFileType"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-fireflies-ai": {
+    "actions": [
+      "find-meeting-by-id",
+      "find_recent_meeting",
+      "find_meeting_by_query",
+      "upload_audio",
+      "get-user-details"
+    ],
+    "triggers": [
+      "new_transcription_completed"
+    ]
+  },
+  "@activepieces/piece-fliqr-ai": {
+    "actions": [
+      "get_fliqr_account_details",
+      "get_fliqr_account_flows"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-flow-helper": {
+    "actions": [
+      "getRunId",
+      "failFlow"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-flowlu": {
+    "actions": [
+      "flowlu_create_contact",
+      "flowlu_update_contact",
+      "flowlu_delete_contact",
+      "flowlu_create_organization",
+      "flowlu_create_opportunity",
+      "flowlu_update_opportunity",
+      "flowlu_delete_opportunity",
+      "flowlu_create_task",
+      "flowlu_update_task",
+      "flowlu_get_task",
+      "flowlu_delete_task"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-forms": {
+    "actions": [
+      "return_response"
+    ],
+    "triggers": [
+      "form_submission",
+      "chat_submission"
+    ]
+  },
+  "@activepieces/piece-gameball": {
+    "actions": [
+      "sendEvent"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-gcloud-pubsub": {
+    "actions": [
+      "publish_to_topic"
+    ],
+    "triggers": [
+      "new_message_in_topic"
+    ]
+  },
+  "@activepieces/piece-generatebanners": {
+    "actions": [
+      "render_template"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-gistly": {
+    "actions": [
+      "get_transcript"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-gmail": {
+    "actions": [
+      "gmail_send_email",
+      "create_custom_api_call"
+    ],
+    "triggers": [
+      "new_email",
+      "new_labeled_email"
+    ]
+  },
+  "@activepieces/piece-google-drive": {
+    "actions": [],
+    "triggers": [
+      "new_file",
+      "new_folder"
+    ]
+  },
+  "@activepieces/piece-google-sheets": {
+    "actions": [
+      "insert_row",
+      "insert_multiple_rows",
+      "delete_row",
+      "update_row",
+      "find_rows",
+      "create_spreadsheet",
+      "create_worksheet",
+      "clear_sheet",
+      "find_row_by_num",
+      "get_rows",
+      "find_spreadsheets",
+      "find_worksheet",
+      "copy_worksheet",
+      "update_multiple_rows",
+      "create_column",
+      "export_sheet",
+      "get_next_rows",
+      "create_custom_api_call"
+    ],
+    "triggers": [
+      "new_row_added",
+      "new_or_updated_row",
+      "new_spreadsheet",
+      "new_worksheet"
+    ]
+  },
+  "@activepieces/piece-gotify": {
+    "actions": [
+      "send_notification"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-graphql": {
+    "actions": [
+      "send_request"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-gravityforms": {
+    "actions": [],
+    "triggers": [
+      "new-submission"
+    ]
+  },
+  "@activepieces/piece-hackernews": {
+    "actions": [
+      "fetch_top_stories"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-http": {
+    "actions": [
+      "send_request"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-http-oauth2": {
+    "actions": [
+      "send-oauth2-request"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-http-request": {
+    "actions": [
+      "send_request"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-image-ai": {
+    "actions": [
+      "generateImage"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-image-helper": {
+    "actions": [
+      "image_to_base64",
+      "get_meta_data",
+      "crop_image",
+      "rotate_image",
+      "resize_image",
+      "compress_image"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-imap": {
+    "actions": [],
+    "triggers": [
+      "new_email"
+    ]
+  },
+  "@activepieces/piece-instagram-business": {
+    "actions": [
+      "upload_photo",
+      "upload_reel"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-instasent": {
+    "actions": [
+      "add_or_update_contact",
+      "delete_contact",
+      "add_event"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-intercom": {
+    "actions": [
+      "add-note-to-user",
+      "addNoteToConversation",
+      "add-or-remove-tag-on-contact",
+      "add-or-remove-tag-on-company",
+      "add-or-remove-tag-on-conversation",
+      "create-article",
+      "create-conversation",
+      "create-ticket",
+      "create-user",
+      "create-or-update-lead",
+      "create-or-update-user",
+      "replyToConversation",
+      "send_message",
+      "update-ticket",
+      "find-company",
+      "find-conversation",
+      "find-lead",
+      "find-user",
+      "list-all-tags",
+      "get-conversation"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-json": {
+    "actions": [
+      "convert_json_to_text",
+      "parse_json"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-kallabot-ai": {
+    "actions": [
+      "make-call",
+      "get-call-details"
+    ],
+    "triggers": [
+      "catch_webhook"
+    ]
+  },
+  "@activepieces/piece-krisp-call": {
+    "actions": [
+      "addContact",
+      "deleteContacts",
+      "sendSms",
+      "sendMms"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-linear": {
+    "actions": [
+      "linear_create_issue",
+      "linear_update_issue",
+      "linear_create_project",
+      "linear_update_project",
+      "linear_create_comment",
+      "rawGraphqlQuery"
+    ],
+    "triggers": [
+      "new_issue",
+      "updated_issue",
+      "removed_issue"
+    ]
+  },
+  "@activepieces/piece-linka": {
+    "actions": [
+      "addOrUpdateContactExtended",
+      "addOrUpdateContactExtended",
+      "addOrUpdateSubscription",
+      "createInvoice",
+      "createProduct",
+      "getContactDetails"
+    ],
+    "triggers": [
+      "newLead",
+      "newPayment",
+      "newSubscription"
+    ]
+  },
+  "@activepieces/piece-mailchain": {
+    "actions": [
+      "getAuthenticatedUser",
+      "sendEmail"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-mailchimp": {
+    "actions": [
+      "add_member_to_list",
+      "add_note_to_subscriber",
+      "add_subscriber_to_tag",
+      "remove_subscriber_to_tag",
+      "update_member_in_list"
+    ],
+    "triggers": [
+      "subscribe",
+      "unsubscribe"
+    ]
+  },
+  "@activepieces/piece-maileroo": {
+    "actions": [
+      "sendEmail",
+      "sendFromTemplate",
+      "verifyEmail"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-mailjet": {
+    "actions": [
+      "send_email"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-manychat": {
+    "actions": [
+      "addTagToUser",
+      "createSubscriber",
+      "findUserByCustomField",
+      "findUserByName",
+      "removeTagFromUser",
+      "sendContentToUser",
+      "setCustomField"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-math-helper": {
+    "actions": [
+      "addition_math",
+      "subtraction_math",
+      "multiplication_math",
+      "division_math",
+      "modulo_math",
+      "generateRandom_math"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-mcp": {
+    "actions": [
+      "reply_to_mcp_client"
+    ],
+    "triggers": [
+      "mcp_tool"
+    ]
+  },
+  "@activepieces/piece-medullar": {
+    "actions": [
+      "createSpace",
+      "listSpaces",
+      "addSpaceRecord",
+      "askSpace"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-messagebird": {
+    "actions": [
+      "send-sms"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-metabase": {
+    "actions": [
+      "getQuestion",
+      "getQuestionPngPreview",
+      "getDashboardQuestions",
+      "getGraphQuestion"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-microsoft-dynamics-365-business-central": {
+    "actions": [
+      "create-record",
+      "delete-record",
+      "get-record",
+      "update-record",
+      "search-records"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-monday": {
+    "actions": [
+      "monday_create_column",
+      "monday_create_group",
+      "monday_create_item",
+      "monday_create_update",
+      "monday_get_board_values",
+      "monday_get_item_column_values",
+      "monday_update_column_values_of_item",
+      "monday_update_item_name",
+      "monday_upload_file_to_column"
+    ],
+    "triggers": [
+      "monday_new_item_in_board",
+      "monday_specific_column_updated"
+    ]
+  },
+  "@activepieces/piece-netsuite": {
+    "actions": [
+      "getVendor",
+      "getCustomer"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-nocodb": {
+    "actions": [
+      "nocodb-create-record",
+      "nocodb-delete-record",
+      "nocodb-update-record",
+      "nocodb-get-record",
+      "nocodb-search-records"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-open-router": {
+    "actions": [
+      "ask-lmm"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-openai": {
+    "actions": [
+      "ask_chatgpt",
+      "ask_assistant",
+      "generate_image",
+      "vision_prompt",
+      "text_to_speech",
+      "transcribe",
+      "translate",
+      "extract_structured_data",
+      "create_custom_api_call"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-pdf": {
+    "actions": [
+      "extractText",
+      "convertToImage",
+      "textToPdf",
+      "imageToPdf"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-perplexity-ai": {
+    "actions": [
+      "ask-ai"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-personal-ai": {
+    "actions": [
+      "create_memory",
+      "create_message",
+      "create_chatgpt_instruction",
+      "create_custom_training",
+      "get_conversation",
+      "upload_document",
+      "upload_file",
+      "upload_url",
+      "update_document",
+      "get_document"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-photoroom": {
+    "actions": [
+      "removeBackground"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-poper": {
+    "actions": [],
+    "triggers": [
+      "newLead"
+    ]
+  },
+  "@activepieces/piece-postgres": {
+    "actions": [
+      "run-query"
+    ],
+    "triggers": [
+      "new-row"
+    ]
+  },
+  "@activepieces/piece-pushover": {
+    "actions": [
+      "send_notification"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-qdrant": {
+    "actions": [
+      "add_points_to_collection",
+      "collection_list",
+      "collection_infos",
+      "delete_collection",
+      "delete_points",
+      "get_points",
+      "search_points"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-qrcode": {
+    "actions": [
+      "text_to_qrcode"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-queue": {
+    "actions": [
+      "push-to-queue",
+      "pull-from-queue",
+      "clear-queue"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-quickzu": {
+    "actions": [
+      "quickzu_add_product",
+      "quickzu_update_product",
+      "quickzu_delete_product",
+      "quickzu_list_products",
+      "quickzu_create_category",
+      "quickzu_update_category",
+      "quickzu_delete_category",
+      "quickzu_list_categories",
+      "quickzu_get_order_details",
+      "quickzu_list_orders",
+      "quickzu_list_live_orders",
+      "quickzu_update_order_status",
+      "quickzu_create_product_discount",
+      "quickzu_create_promo_code",
+      "quickzu_update_business_time"
+    ],
+    "triggers": [
+      "Mohit"
+    ]
+  },
+  "@activepieces/piece-rabbitmq": {
+    "actions": [
+      "sendMessageToExchange",
+      "sendMessageToQueue"
+    ],
+    "triggers": [
+      "messageReceived"
+    ]
+  },
+  "@activepieces/piece-reoon-verifier": {
+    "actions": [
+      "verifyEmail",
+      "bulkEmailVerificationTask",
+      "bulkVerificationResult"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-returning-ai": {
+    "actions": [
+      "sendMessage",
+      "replyMessage",
+      "reactMessage"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-rss": {
+    "actions": [],
+    "triggers": [
+      "new-item",
+      "new-item-list"
+    ]
+  },
+  "@activepieces/piece-saleor": {
+    "actions": [
+      "rawGraphqlQuery",
+      "getOrder",
+      "addOrderNote"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-salesforce": {
+    "actions": [
+      "run_query",
+      "create_new_object",
+      "update_object_by_id",
+      "upsert_by_external_id",
+      "upsert_by_external_id_bulk"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-schedule": {
+    "actions": [],
+    "triggers": [
+      "every_day",
+      "every_hour",
+      "every_week",
+      "cron_expression"
+    ]
+  },
+  "@activepieces/piece-segment": {
+    "actions": [
+      "identifyUser"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-sendy": {
+    "actions": [
+      "count_subscribers",
+      "create_campaign",
+      "delete_subscriber",
+      "get_brands",
+      "get_brand_lists",
+      "get_subscription_status",
+      "subscribe",
+      "subscribe_multiple_lists",
+      "unsubscribe",
+      "unsubscribe_multiple"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-serp-api": {
+    "actions": [
+      "google_search",
+      "google_news_search",
+      "youtube_search",
+      "google_trends_search"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-seven": {
+    "actions": [
+      "send-sms",
+      "send-voice-call",
+      "lookup"
+    ],
+    "triggers": [
+      "new_incoming_sms"
+    ]
+  },
+  "@activepieces/piece-sftp": {
+    "actions": [
+      "create_file",
+      "upload_file",
+      "read_file_content",
+      "deleteFile",
+      "createFolder",
+      "deleteFolder",
+      "listFolderContents",
+      "renameFileOrFolder"
+    ],
+    "triggers": [
+      "new_file"
+    ]
+  },
+  "@activepieces/piece-simplepdf": {
+    "actions": [],
+    "triggers": [
+      "new-submission"
+    ]
+  },
+  "@activepieces/piece-smartsheet": {
+    "actions": [
+      "add_row_to_sheet",
+      "update_row",
+      "attach_file_to_row",
+      "find_rows_by_query",
+      "find_attachment_by_row_id",
+      "find_sheet_by_name"
+    ],
+    "triggers": [
+      "new_row_added",
+      "updated_row",
+      "new_attachment_",
+      "new_comment_webhook"
+    ]
+  },
+  "@activepieces/piece-smtp": {
+    "actions": [
+      "send-email"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-snowflake": {
+    "actions": [
+      "runQuery",
+      "runMultipleQueries",
+      "insert-row"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-soap": {
+    "actions": [
+      "call_method"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-sperse": {
+    "actions": [
+      "addOrUpdateContactExtended",
+      "addOrUpdateContactExtended",
+      "addOrUpdateSubscription",
+      "createInvoice",
+      "createProduct",
+      "getContactDetails"
+    ],
+    "triggers": [
+      "new_lead",
+      "new_payment",
+      "new_subscription"
+    ]
+  },
+  "@activepieces/piece-stable-diffusion-webui": {
+    "actions": [
+      "textToImage"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-store": {
+    "actions": [
+      "get",
+      "put",
+      "delete"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-subflows": {
+    "actions": [
+      "callFlow",
+      "returnResponse"
+    ],
+    "triggers": [
+      "callableFlow"
+    ]
+  },
+  "@activepieces/piece-supadata": {
+    "actions": [
+      "get_transcript"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-surrealdb": {
+    "actions": [
+      "run-query"
+    ],
+    "triggers": [
+      "new-row"
+    ]
+  },
+  "@activepieces/piece-tables": {
+    "actions": [
+      "tables-create-records",
+      "tables-delete-record",
+      "tables-update-record",
+      "tables-get-record",
+      "tables-find-records"
+    ],
+    "triggers": [
+      "newRecord",
+      "updatedRecord",
+      "deletedRecord"
+    ]
+  },
+  "@activepieces/piece-tags": {
+    "actions": [
+      "add_tag"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-tally": {
+    "actions": [],
+    "triggers": [
+      "new-submission"
+    ]
+  },
+  "@activepieces/piece-tavily": {
+    "actions": [
+      "search",
+      "extract"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-text-ai": {
+    "actions": [
+      "askAi",
+      "summarizeText"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-text-helper": {
+    "actions": [
+      "concat",
+      "replace",
+      "split",
+      "find",
+      "markdown_to_html",
+      "html_to_markdown",
+      "stripHtml",
+      "slugify",
+      "defaultValue"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-thankster": {
+    "actions": [
+      "send_handwritten_cards"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-todos": {
+    "actions": [
+      "createTodo",
+      "wait_for_approval",
+      "createTodoAndWait"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-trello": {
+    "actions": [
+      "create_card",
+      "get_card"
+    ],
+    "triggers": [
+      "card_moved_to_list",
+      "new_card"
+    ]
+  },
+  "@activepieces/piece-twin-labs": {
+    "actions": [
+      "startBrowsingTask"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-twitter": {
+    "actions": [
+      "create-tweet",
+      "create-reply"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-typeform": {
+    "actions": [
+      "create_form",
+      "update_form",
+      "delete_form"
+    ],
+    "triggers": [
+      "new_submission"
+    ]
+  },
+  "@activepieces/piece-upgradechat": {
+    "actions": [
+      "addOrUpdateContactExtended",
+      "addOrUpdateContactExtended",
+      "addOrUpdateSubscription",
+      "createInvoice",
+      "createProduct",
+      "getContactDetails"
+    ],
+    "triggers": [
+      "newLead",
+      "newPayment",
+      "newSubscription"
+    ]
+  },
+  "@activepieces/piece-utility-ai": {
+    "actions": [
+      "checkModeration",
+      "classifyText",
+      "extractStructuredData"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-vbout": {
+    "actions": [
+      "vbout_add_contact",
+      "vbout_add_tag",
+      "vbout_create_email_list",
+      "vbout_add_email_marketing_campaign",
+      "vbout_create_social_media_message",
+      "vbout_get_contact_by_email",
+      "vbout_get_email_list",
+      "vbout_remove_tag",
+      "vbout_unsubscribe_contact",
+      "vbout_update_contact"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-village": {
+    "actions": [
+      "fetchPeoplePaths",
+      "fetchCompaniesPaths"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-vtiger": {
+    "actions": [
+      "create_record",
+      "get_record",
+      "update_record",
+      "delete_record",
+      "query_records",
+      "search_records",
+      "make_api_call"
+    ],
+    "triggers": [
+      "new_or_updated_record"
+    ]
+  },
+  "@activepieces/piece-webhook": {
+    "actions": [
+      "return_response",
+      "return_response_and_wait_for_next_webhook"
+    ],
+    "triggers": [
+      "catch_webhook"
+    ]
+  },
+  "@activepieces/piece-webling": {
+    "actions": [
+      "EventsById"
+    ],
+    "triggers": [
+      "onEventChanged",
+      "onChangedData"
+    ]
+  },
+  "@activepieces/piece-wedof": {
+    "actions": [
+      "getRegistrationFolder",
+      "listRegistrationFolders",
+      "updateRegistrationFolder",
+      "validateRegistrationFolder",
+      "declareRegistrationFolderTerminated",
+      "declareRegistrationFolderServicedone",
+      "declareRegistrationFolderIntraining",
+      "billRegistrationFolder",
+      "cancelRegistrationFolder",
+      "refuseRegistrationFolder",
+      "getMinimalSessionsDates",
+      "getRegistrationFolderDocuments",
+      "updateCompletionRate",
+      "getCertificationFolder",
+      "searchCertificationFolder",
+      "declareCertificationFolderRegistred",
+      "declareCertificationFolderToTake",
+      "declareCertificationFolderToControl",
+      "declareCertificationFolderSuccess",
+      "declareCertificationFolderToRetake",
+      "declareCertificationFolderFailed",
+      "refuseCertificationFolder",
+      "abortCertificationFolder",
+      "getCertificationFolderDocuments",
+      "updateCertificationFolder",
+      "listActivitiesAndTasks",
+      "createTask",
+      "createActivitie",
+      "sendFile",
+      "getCertificationFolderDocuments",
+      "myOrganism",
+      "addExecutionTag",
+      "getCertificationFolderSurvey",
+      "listCertificationFolderSurveys",
+      "createCertificationPartnerAudit",
+      "createGeneralAudit",
+      "getPartnership",
+      "updatePartnership",
+      "deletePartnership",
+      "listPartnerships",
+      "createPartnership",
+      "resetPartnership"
+    ],
+    "triggers": [
+      "newRegistrationFolderNotProcessed",
+      "registrationFolderUpdated",
+      "registrationFolderAccepted",
+      "registrationFolderInTraining",
+      "registrationFolderTerminated",
+      "registrationFolderPaid",
+      "registrationFolderSelected",
+      "registrationFolderTobill",
+      "newCertificationFolderCreated",
+      "certificationFolderUpdated",
+      "certificationFolderRegistred",
+      "certificationFolderTotake",
+      "certificationFolderToControl",
+      "certificationfolderSuccess",
+      "certificationFolderToretake",
+      "certificationFolderSelected",
+      "certificationFolderSurveyInitialExperienceAvailable",
+      "certificationFolderSurveyInitialExperienceAnswered",
+      "certificationFolderSurveyLongTermExperienceAnswered",
+      "certificationFolderSurveyLongTermExperienceAvailable",
+      "certificationFolderSurveySixMonthExperienceAnswered",
+      "certificationFolderSurveySixMonthExperienceAvailable",
+      "certificationPartnerAborted",
+      "certificationPartnerProcessing",
+      "certificationPartnerActive",
+      "certificationPartnerRefused",
+      "certificationPartnerRevoked",
+      "certificationPartnerSuspended"
+    ]
+  },
+  "@activepieces/piece-whatsable": {
+    "actions": [
+      "sendMessage"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-whatsapp": {
+    "actions": [
+      "sendMessage",
+      "sendMedia",
+      "send-template-message"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-wootric": {
+    "actions": [
+      "trigger_wootric_survey"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-wordpress": {
+    "actions": [
+      "create_post",
+      "update_post",
+      "delete_post",
+      "create_page"
+    ],
+    "triggers": [
+      "new_post",
+      "post_updated"
+    ]
+  },
+  "@activepieces/piece-xml": {
+    "actions": [
+      "convert-json-to-xml"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-zagomail": {
+    "actions": [
+      "createSubscriber",
+      "tagSubscriber",
+      "updateSubscriber",
+      "searchSubscriberByEmail",
+      "getSubscriberDetails",
+      "getCampaignDetails"
+    ],
+    "triggers": [
+      "addedSubscriber",
+      "unsubscribedSubscriber",
+      "taggedSubscriber"
+    ]
+  },
+  "@activepieces/piece-zerobounce": {
+    "actions": [
+      "validateEmail"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-zoho-crm": {
+    "actions": [
+      "read-file"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-zoho-desk": {
+    "actions": [
+      "list_tickets",
+      "create_ticket",
+      "find-contact"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-zoho-mail": {
+    "actions": [
+      "get_email_details",
+      "mark_email_as_read",
+      "mark_email_as_unread",
+      "move_email",
+      "send_email"
+    ],
+    "triggers": []
+  },
+  "@activepieces/piece-zuora": {
+    "actions": [
+      "create-invoice",
+      "find-account",
+      "find-product-rate-plan",
+      "find-product"
+    ],
+    "triggers": []
+  }
+}

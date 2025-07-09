@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activepieces Workflow Generator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .generate-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .generate-btn:hover {
+            background-color: #45a049;
+        }
+
+        .generate-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .download-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .download-btn:hover {
+            background-color: #1976D2;
+        }
+
+        .download-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .result-section {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .result-title {
+            color: #333;
+            font-weight: 500;
+        }
+
+        .copy-btn {
+            padding: 6px 12px;
+            background-color: #666;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            background-color: #555;
+        }
+
+        .json-output {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .json-output pre {
+            margin: 0;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .error-message {
+            background-color: #fee;
+            border: 1px solid #fcc;
+            color: #c33;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .success-message {
+            background-color: #efe;
+            border: 1px solid #cfc;
+            color: #3c3;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #4CAF50;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .examples {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+        }
+
+        .examples h3 {
+            color: #555;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .example-item {
+            padding: 8px 12px;
+            margin: 5px 0;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .example-item:hover {
+            background-color: #f0f0f0;
+            border-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Activepieces Workflow Generator</h1>
+        <p class="subtitle">Generate workflow JSON files from natural language descriptions</p>
+
+        <form id="workflowForm">
+            <div class="form-group">
+                <label for="prompt">Describe your workflow:</label>
+                <textarea 
+                    id="prompt" 
+                    name="prompt" 
+                    placeholder="Example: When a new email arrives in Gmail with subject 'Invoice', extract the attachment and save it to Google Drive"
+                    required
+                ></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="generate-btn" id="generateBtn">
+                    Generate Workflow
+                </button>
+                <button type="button" class="download-btn" id="downloadBtn" disabled>
+                    Download JSON
+                </button>
+            </div>
+        </form>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Generating workflow...</p>
+        </div>
+
+        <div class="error-message" id="errorMessage"></div>
+        <div class="success-message" id="successMessage"></div>
+
+        <div class="suggestions-section" id="suggestionsSection" style="display: none; margin-top: 20px;">
+            <h3 style="color: #555; margin-bottom: 10px;">Suggested Pieces:</h3>
+            <div id="suggestionsList" style="display: flex; flex-wrap: wrap; gap: 10px;"></div>
+        </div>
+
+        <div class="result-section" id="resultSection">
+            <div class="result-header">
+                <h3 class="result-title">Generated Workflow JSON:</h3>
+                <button class="copy-btn" onclick="copyToClipboard()">Copy to Clipboard</button>
+            </div>
+            <div class="json-output">
+                <pre id="jsonOutput"></pre>
+            </div>
+        </div>
+
+        <div class="examples">
+            <h3>Example prompts (click to use):</h3>
+            <div class="example-item" onclick="useExample(this)">
+                When a new row is added to Google Sheets, send an email notification
+            </div>
+            <div class="example-item" onclick="useExample(this)">
+                Every day at 9 AM, fetch weather data and post it to Slack
+            </div>
+            <div class="example-item" onclick="useExample(this)">
+                When someone submits a Typeform, save their data to Airtable and send a confirmation email
+            </div>
+            <div class="example-item" onclick="useExample(this)">
+                Monitor a website for changes and send alerts via Discord when updates are detected
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let generatedWorkflow = null;
+        let generatedFilename = null;
+
+        document.getElementById('workflowForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const prompt = document.getElementById('prompt').value.trim();
+            if (!prompt) return;
+
+            // Reset UI
+            document.getElementById('errorMessage').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'none';
+            document.getElementById('resultSection').style.display = 'none';
+            document.getElementById('suggestionsSection').style.display = 'none';
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('generateBtn').disabled = true;
+            document.getElementById('downloadBtn').disabled = true;
+
+            try {
+                const response = await fetch('http://localhost:5000/generate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ prompt }),
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    generatedWorkflow = data.workflow;
+                    generatedFilename = data.filename || 'workflow.json';
+                    
+                    // Display JSON
+                    document.getElementById('jsonOutput').textContent = JSON.stringify(data.workflow, null, 2);
+                    document.getElementById('resultSection').style.display = 'block';
+                    
+                    // Show suggestions if available
+                    if (data.suggestions && data.suggestions.length > 0) {
+                        const suggestionsList = document.getElementById('suggestionsList');
+                        suggestionsList.innerHTML = '';
+                        data.suggestions.forEach(piece => {
+                            const chip = document.createElement('div');
+                            chip.style.cssText = 'padding: 8px 16px; background: #e3f2fd; border-radius: 16px; color: #1976d2; font-size: 14px;';
+                            chip.textContent = piece.replace('@activepieces/piece-', '');
+                            suggestionsList.appendChild(chip);
+                        });
+                        document.getElementById('suggestionsSection').style.display = 'block';
+                    }
+                    
+                    // Show pieces used
+                    const piecesUsedText = data.pieces_used ? `Pieces used: ${data.pieces_used.map(p => p.replace('@activepieces/piece-', '')).join(', ')}` : '';
+                    
+                    // Show success message
+                    document.getElementById('successMessage').textContent = `Workflow generated successfully! File: ${generatedFilename}. ${piecesUsedText}`;
+                    document.getElementById('successMessage').style.display = 'block';
+                    
+                    // Enable download button
+                    document.getElementById('downloadBtn').disabled = false;
+                } else {
+                    throw new Error(data.error || 'Failed to generate workflow');
+                }
+            } catch (error) {
+                document.getElementById('errorMessage').textContent = `Error: ${error.message}`;
+                document.getElementById('errorMessage').style.display = 'block';
+            } finally {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('generateBtn').disabled = false;
+            }
+        });
+
+        document.getElementById('downloadBtn').addEventListener('click', () => {
+            if (!generatedWorkflow) return;
+
+            const jsonString = JSON.stringify(generatedWorkflow, null, 2);
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = generatedFilename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+
+        function copyToClipboard() {
+            const jsonText = document.getElementById('jsonOutput').textContent;
+            navigator.clipboard.writeText(jsonText).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            });
+        }
+
+        function useExample(element) {
+            document.getElementById('prompt').value = element.textContent.trim();
+            document.getElementById('prompt').focus();
+        }
+    </script>
+</body>
+</html>
